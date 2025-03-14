@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-card">
+            <div class="card-header">
+                <h1><i class="fas fa-laugh"></i> Random Joke Generator</h1>
+                <span id="current-category" class="category-badge">Any</span>
+            </div>
+            
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="Any">Any</button>
+                <button class="tab-btn" data-category="Programming">Programming</button>
+                <button class="tab-btn" data-category="Misc">Misc</button>
+                <button class="tab-btn" data-category="Pun">Pun</button>
+                <button class="tab-btn" data-category="Spooky">Spooky</button>
+                <button class="tab-btn" data-category="Christmas">Christmas</button>
+            </div>
+            
+            <div class="joke-content">
+                <div id="loader" class="hidden">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+                
+                <div id="error-message" class="hidden"></div>
+                
+                <div id="joke-display">
+                    <p id="joke-text">Click the button to generate a joke!</p>
+                    <p id="joke-delivery" class="hidden"></p>
+                </div>
+            </div>
+            
+            <div class="card-footer">
+                <button id="like-btn" class="btn btn-outline">
+                    <i class="fas fa-thumbs-up"></i> Like
+                </button>
+                <button id="new-joke-btn" class="btn btn-primary">
+                    <i class="fas fa-sync-alt"></i> New Joke
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
